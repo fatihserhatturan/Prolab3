@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace ProLab3Deneme4
 {
     internal static class Program

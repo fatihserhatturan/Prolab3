@@ -14,6 +14,7 @@ namespace ProLab3Deneme4
         private string surname;
         private int[] birthDate;
         private string motherName;
+        private string partnerName;
         private string fatherName;
         private string bloodGroup;
         private string job;
@@ -21,15 +22,15 @@ namespace ProLab3Deneme4
         private Person partner;
         private string maritalStatus;
         private string maidenName;
-        private List<Person> childeren;
 
 
-        public Person(double id, string name, string surname, int[] birthDate, string partnername, string motherName, string fatherName, string bloodGroup, string job, string maritalStatus, string maidenName, string gender)
+        public Person(double id, string name, string surname, int[] birthDate, string partnername, string motherName, string fatherName, string bloodGroup, string job, string maritalStatus, string maidenName, string gender, string partnerName = null)
         {
             this.id = id;
             this.name = name;
             this.surname = surname;
             this.birthDate = birthDate;
+            this.partnerName = partnername;
             this.motherName = motherName;
             this.fatherName = fatherName;
             this.bloodGroup = bloodGroup;
@@ -37,7 +38,6 @@ namespace ProLab3Deneme4
             this.gender = gender;
             this.maritalStatus = maritalStatus;
             this.maidenName = maidenName;
-            childeren = new List<Person>();
             if (partnername != "")
             {
                 if (gender == "Erkek")
@@ -66,8 +66,7 @@ namespace ProLab3Deneme4
         public string Gender { get => gender; }
         public string MaritalStatus { get => maritalStatus; }
         public string MaidenName { get => maidenName; }
-        public List<Person> Childeren { get => childeren; set => childeren = value; }
         public string Name { get => name; set => name = value; }
-
+        public string PartnerName { get => partnerName; set => partnerName = value; }
     }
 }
